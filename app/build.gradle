@@ -58,15 +58,15 @@ android {
     signingConfigs {
         release {
             storeFile file("./keystore/release.jks")
-            storePassword "release"
-            keyAlias "release"
-            keyPassword "release"
+            storePassword "eshine123"
+            keyAlias "eshine"
+            keyPassword "eshine123"
         }
         debug {
-            storeFile file("./keystore/release.keystore")
-            storePassword "release"
-            keyAlias "release"
-            keyPassword "release"
+            storeFile file("./keystore/release.jks")
+            storePassword "eshine123"
+            keyAlias "eshine"
+            keyPassword "eshine123"
         }
     }
 }

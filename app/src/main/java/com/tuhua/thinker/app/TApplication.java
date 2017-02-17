@@ -3,8 +3,11 @@ package com.tuhua.thinker.app;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import com.tencent.tinker.anno.DefaultLifeCycle;
+import com.tencent.tinker.lib.tinker.Tinker;
+import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
 import com.tencent.tinker.loader.shareutil.ShareConstants;
 
@@ -25,7 +28,8 @@ public class TApplication extends DefaultApplicationLike{
     @Override
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
+        TinkerInstaller.install(this);
 
-
+        Log.e("info","是否安装了Tinker："+ Tinker.isTinkerInstalled());
     }
 }
