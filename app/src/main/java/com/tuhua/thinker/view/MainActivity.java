@@ -1,7 +1,9 @@
-package com.tuhua.thinker;
+package com.tuhua.thinker.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.tuhua.thinker.R;
 
 public class MainActivity extends AppCompatActivity {
 
