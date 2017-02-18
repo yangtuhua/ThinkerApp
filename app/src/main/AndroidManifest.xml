@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:name="com.tuhua.thinker.Application"
         android:theme="@style/AppTheme">
+
+        <!--Tinker热更新id-->
+        <meta-data android:name="TINKER_ID" android:value="yangtuhua"/>
+
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
