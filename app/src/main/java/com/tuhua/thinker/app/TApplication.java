@@ -3,6 +3,7 @@ package com.tuhua.thinker.app;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.tencent.tinker.anno.DefaultLifeCycle;
@@ -28,8 +29,12 @@ public class TApplication extends DefaultApplicationLike{
     @Override
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
+        //you must install multiDex whatever tinker is installed!
+        MultiDex.install(base);
+
         TinkerInstaller.install(this);
 
         Log.e("info","是否安装了Tinker："+ Tinker.isTinkerInstalled());
+
     }
 }
